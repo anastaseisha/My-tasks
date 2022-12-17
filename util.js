@@ -28,7 +28,7 @@ const isEscapeKey = (evt) => evt.key === 'Escape';
 const checkLength = (string, maxLength) => string.length <= maxLength;
 const checkValuesNotRepeat = (arr) => arr.toLowerCase().split(' ').length === new Set(arr.toLowerCase().split(' ')).size;
 
-const showAlert = (message, color) => {
+const showAlert = (message) => {
   const alertContainer = document.createElement('div');
   alertContainer.style.zIndex = '100';
   alertContainer.style.position = 'absolute';
@@ -38,7 +38,7 @@ const showAlert = (message, color) => {
   alertContainer.style.padding = '10px 3px';
   alertContainer.style.fontSize = '30px';
   alertContainer.style.textAlign = 'center';
-  alertContainer.style.backgroundColor = color;
+  alertContainer.style.backgroundColor = 'red';
 
   alertContainer.textContent = message;
 
